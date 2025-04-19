@@ -9,9 +9,6 @@ abstract class TodoServiceI {
 // what servide does?
 // crud operations
 class TodoService extends TodoServiceI {
-  // Simulate a database with a list
-  List<Todo> _todos = [];
-
   // Method to add a todo
   Future<int> addTodo(String title, String description) async {
     return 1;
@@ -19,7 +16,7 @@ class TodoService extends TodoServiceI {
 
   // Method to get all todos
   Future<List<Todo>> getTodos() async {
-    return _todos;
+    return [];
   }
 
   // Method to remove a todo

@@ -5,7 +5,23 @@ import 'package:flutter_application_1/service/todo_service.dart';
 // crud operations
 class TodoServiceStub extends TodoServiceI {
   // Simulate a database with a list
-  List<Todo> _todos = [];
+  List<Todo> _todos = [
+    Todo(
+      id: 1,
+      title: 'Todo 1',
+      description: 'Description 1',
+    ),
+    Todo(
+      id: 2,
+      title: 'Todo 2',
+      description: 'Description 2',
+    ),
+    Todo(
+      id: 3,
+      title: 'Todo 3',
+      description: 'Description 3',
+    ),
+  ];
 
   // Method to add a todo
   Future<int> addTodo(String title, String description) async {
