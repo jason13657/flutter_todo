@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/provider/todo_provider.dart';
+import 'package:flutter_application_1/ui/circular_loading.dart';
 import 'package:flutter_application_1/widget/todo_form.dart';
 import 'package:flutter_application_1/widget/todo_list.dart';
 import 'package:provider/provider.dart';
@@ -59,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularLoading())
           : Consumer<TodoProvider>(
               builder: (context, todoProvider, child) {
                 return TodoList(todos: todoProvider.todos);
