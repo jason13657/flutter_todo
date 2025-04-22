@@ -29,6 +29,12 @@ class TodoProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> removeTodo(int id) async {
+    await todoService.removeTodo(id);
+    _todos = await todoService.getTodos();
+    notifyListeners();
+  }
+
   void _isFull() {
     if (_todos.length >= maxTodos) {
       throw Exception('Max todos reached');

@@ -4,7 +4,6 @@ import 'package:path/path.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_application_1/provider/todo_provider.dart';
 import 'package:flutter_application_1/service/todo_service.dart';
-import 'package:flutter_application_1/test/service/todo_service_stub.dart';
 import 'package:sqflite/sqflite.dart';
 
 void main() async {
